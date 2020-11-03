@@ -12,15 +12,17 @@
 
 #include "ft_list.h"
 
-int		ft_list_size(t_list *begin_list)
+int	ft_list_size(t_list *begin_list)
 {
 	int		i;
+	t_list	*list;
 
 	i = 0;
-	while (begin_list)
+	list = begin_list;
+	while (list)
 	{
-		begin_list = begin_list->next;
-		++i;
+		list = list->next;
+		i++;
 	}
 	return (i);
 }
